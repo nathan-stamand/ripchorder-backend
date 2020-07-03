@@ -1,8 +1,12 @@
 class SongsController < ApplicationController
   def index
+    songs = Song.all
+    render json: SongSerializer.new(songs)
   end
 
   def show
+    song = Song.find_by(id: params[:id])
+    render json: SongSerializer.new(song)
   end
 
   def create
@@ -18,4 +22,5 @@ class SongsController < ApplicationController
 
   def song_params
     params.require(:song).permit(:title, :author, :chords, :key, :tempo)
+  end
 end
