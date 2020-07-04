@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_07_03_230303) do
+ActiveRecord::Schema.define(version: 2020_07_04_000343) do
 
   create_table "chords", force: :cascade do |t|
     t.string "notes"
@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 2020_07_03_230303) do
     t.string "bass_note"
     t.string "lead_note"
     t.string "name"
+    t.integer "song_id"
   end
 
   create_table "songs", force: :cascade do |t|
@@ -28,6 +29,7 @@ ActiveRecord::Schema.define(version: 2020_07_03_230303) do
     t.integer "tempo"
     t.string "key"
     t.string "author"
+    t.string "chord_order"
   end
 
 end
