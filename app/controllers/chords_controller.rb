@@ -1,2 +1,0 @@
-class ChordsController < ApplicationController
-end

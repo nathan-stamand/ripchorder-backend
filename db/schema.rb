@@ -10,26 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_07_04_000343) do
-
-  create_table "chords", force: :cascade do |t|
-    t.string "notes"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.string "bass_note"
-    t.string "lead_note"
-    t.string "name"
-    t.integer "song_id"
-  end
+ActiveRecord::Schema.define(version: 2020_07_05_123508) do
 
   create_table "songs", force: :cascade do |t|
     t.string "title"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.integer "tempo"
-    t.string "key"
-    t.string "author"
-    t.string "chord_order"
   end
 
 end
