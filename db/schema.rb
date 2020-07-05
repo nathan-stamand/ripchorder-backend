@@ -10,13 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_07_05_123911) do
+ActiveRecord::Schema.define(version: 2020_07_05_124251) do
 
   create_table "chord_feeds", force: :cascade do |t|
     t.integer "position"
     t.string "chord_array"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "song_id"
   end
 
   create_table "songs", force: :cascade do |t|
