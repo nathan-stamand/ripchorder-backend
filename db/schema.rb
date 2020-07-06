@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_07_05_125252) do
+ActiveRecord::Schema.define(version: 2020_07_06_182419) do
 
   create_table "chord_feeds", force: :cascade do |t|
     t.integer "position"
@@ -25,6 +25,9 @@ ActiveRecord::Schema.define(version: 2020_07_05_125252) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "custom_chords"
+    t.string "key"
+    t.string "mode"
+    t.integer "tempo"
   end
 
 end
