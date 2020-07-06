@@ -1,4 +1,4 @@
 class ChordFeedSerializer
   include FastJsonapi::ObjectSerializer
-  attributes 
+  attributes :position, :chord_array
 end
